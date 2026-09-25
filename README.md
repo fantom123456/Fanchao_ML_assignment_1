@@ -2,6 +2,7 @@
 Owen Bowers, Rahsaun Jeffery
 
 How to run:
+pip install -r requirements.txt
 python main.py
 
 A.) Explain your data preprocessing steps, i.e., why you introduce those steps. 
