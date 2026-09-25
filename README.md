@@ -1,6 +1,9 @@
 # Fanchao_ML_assignment_1
 Owen Bowers, Rahsaun Jeffery
 
+How to run:
+python main.py
+
 A.) Explain your data preprocessing steps, i.e., why you introduce those steps. 
 We implemented a strict chronological partition rather than randomized cross-validation, using 2021 through 2022 for model training and holding out all 365 days of 2023 for testing. In time-series forecasting, standard random shuffling allows future target information to leak backward into past training folds, which artificially inflates performance and fails to simulate true real-world operations. Inspection of the raw dataset showed exactly 1,095 consecutive rows with zero missing values, which allowed us to retain all entries without applying artificial numerical imputation. Finally, we standardized all continuous numerical features using a standard scaler fitted exclusively on the 2021–2022 training partition and applied to the 2023 test partition, which prevents large-scale variables from skewing gradient descent in the neural network and distance calculations in the kernel support vector regressor.
 
